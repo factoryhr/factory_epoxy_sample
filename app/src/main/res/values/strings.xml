@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Factory Epoxy Sample</string>
+    <string name="play_time">Play time</string>
+    <string name="number_of_players">Number of players</string>
+    <string name="add_to_cart">Add to cart</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="numberOfItems"
+            type="String" />
+
+        <variable
+            name="onClickListener"
+            type="hr.factory.controller.EpoxySampleControllerListener" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="4dp">
+
+    <RelativeLayout
+        android:id="@+id/rlCounter"
+        android:layout_width="113dp"
+        android:layout_height="45dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/background_white_rounded_5dp"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/ivDecrease"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> onClickListener.onDecreaseItemCountClick()}"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto"
+            android:layout_toEndOf="@+id/ivDecrease"
+            android:layout_toStartOf="@id/ivIncrease"
+            android:gravity="center"
+            android:text="@{numberOfItems}"
+            android:textColor="@color/scarpa_flow"
+            tools:text="1"/>
+
+        <ImageView
+            android:id="@+id/ivIncrease"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> onClickListener.onIncreaseItemCountClick()}"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btnAddToCart"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/add_to_cart"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{() -> onClickListener.onAddToCartClick()}"
+        android:background="@drawable/background_white_rounded_5dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintStart_toEndOf="@id/rlCounter"
+        android:layout_marginStart="16dp">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

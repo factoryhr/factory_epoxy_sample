@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="data"
+            type="hr.factory.ui_models.SectionTitleCellData" />
+    </data>
+<androidx.appcompat.widget.AppCompatTextView android:id="@+id/tvTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/roboto_bold"
+    android:textColor="@color/ebony"
+    android:textSize="20sp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="@{data.title}"
+    tools:text="Section title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />
+</layout>

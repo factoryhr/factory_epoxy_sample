@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D24913</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#4BA163</color>
+    <color name="porcelain">#F1F2F3</color>
+    <color name="ebony">#16132D</color>
+    <color name="scarpa_flow">#515058</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#A2A7AB</color>
+    <color name="gallery">#E3E3E3</color>
+
+</resources>
